@@ -22,7 +22,7 @@ public class QuickSortWithoutGeneric extends Sort {
         int leftPoint = left;
         int rightPoint = right - 1;
         int tmp = arr[right - 1];
-        while (leftPoint < rightPoint) {
+        while (true) {
             while (arr[++leftPoint] < tmp) {}
             while (arr[--rightPoint] > tmp) {}
             if (leftPoint >= rightPoint) {
