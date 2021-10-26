@@ -9,7 +9,7 @@ import java.util.Arrays;
  * <br>
  * CreateDate：2021/10/20 14:21 <br>
  */
-public class NewMergeSort extends Sort {
+public class MergeSortNew extends Sort {
 
     @Override
     public void sort(int[] array) {
@@ -77,15 +77,15 @@ public class NewMergeSort extends Sort {
     }
 
     public static void main(String[] args) {
-        NewMergeSort newMergeSort = new NewMergeSort();
+        MergeSortNew mergeSortNew = new MergeSortNew();
         int[] array = {9, 9, 7, 7, 8, 4, 7, 3, 6, 6, 1, 3, 1, 4, 1, 5, 9, 2, 6, 5,
                 2, 5, 3, 5, 4, 9, 6, 10, 11, 19, 63, 78, 66, 34, 90, 55, 25, 10, 92,
                 0, -1, 34, 22, 17, 14, 9, 66, 96, 86, 22, 47, 74, 48};
         int[] copy = Arrays.copyOf(array, array.length);
-        newMergeSort.sort(array);
+        mergeSortNew.sort(array);
         Arrays.sort(copy);
-        newMergeSort.print(copy);
-        newMergeSort.print(array);
+        mergeSortNew.print(copy);
+        mergeSortNew.print(array);
     }
 
 }
