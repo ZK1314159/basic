@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * 之前的算法的确是错的，对于二叉堆的节点值的更改是直接修改节点值，这破坏了二叉堆的堆结构
+ * 新的方法是将用于二叉堆节点的dist和图节点的dist分开，并且二叉堆节点包含一个图节点
  */
 public class DijkstraAlgorithm {
 
@@ -13,11 +14,13 @@ public class DijkstraAlgorithm {
         boolean known;
         Vertex path;
         int dist;
+        int id;
 
-        Vertex(boolean known, Vertex path, int dist) {
+        Vertex(boolean known, Vertex path, int dist, int id) {
             this.known = known;
             this.path = path;
             this.dist = dist;
+            this.id = id;
             adj = new HashMap<>();
         }
 
@@ -93,7 +96,7 @@ public class DijkstraAlgorithm {
         Vertex[] map = new Vertex[7];
         int max = Integer.MAX_VALUE;
         for (int i = 0; i < map.length; i++) {
-            map[i] = new Vertex(false, null, max);
+            map[i] = new Vertex(false, null, max, i + 1);
         }
         dijkstra.build(map);
         PriorityQueue<PriorityVertex> pri = new PriorityQueue<>(Comparator.comparingInt(PriorityVertex::getDist));
@@ -107,5 +110,13 @@ public class DijkstraAlgorithm {
         for (int i = 0; i < map.length; i++) {
             System.out.println("map[" + i + "]: " + map[i].dist);
         }
+
+        int endPoint = 5;
+        Vertex end = map[endPoint];
+        while (end.path != null) {
+            System.out.print(end.path.id + " ");
+            end = end.path;
+        }
+        System.out.println(" ");
     }
 }
