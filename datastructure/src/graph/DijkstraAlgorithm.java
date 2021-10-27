@@ -2,27 +2,49 @@ package graph;
 
 import java.util.*;
 
-public class Dijkstra_Algorithm {
+/**
+ * 之前的算法的确是错的，对于二叉堆的节点值的更改是直接修改节点值，这破坏了二叉堆的堆结构
+ */
+public class DijkstraAlgorithm {
+
     private static class Vertex {
+
         Map<Vertex, Integer> adj;
         boolean known;
-        int dist;
         Vertex path;
+        int dist;
 
-        Vertex(boolean known, int dist, Vertex path) {
+        Vertex(boolean known, Vertex path, int dist) {
             this.known = known;
-            this.dist = dist;
             this.path = path;
+            this.dist = dist;
             adj = new HashMap<>();
+        }
+
+    }
+
+    private static class PriorityVertex {
+
+        Vertex vertex;
+        int dist;
+
+        int getDist() {
+            return this.dist;
+        }
+
+        PriorityVertex(Vertex vertex, int dist) {
+            this.vertex = vertex;
+            this.dist = dist;
         }
     }
 
-    private void find(Vertex[] map, int i, PriorityQueue<Vertex> pri) {
-        Vertex start = map[i];
+    private void find(Vertex start, PriorityQueue<PriorityVertex> pri) {
         start.dist = 0;
-        pri.offer(start);
+        PriorityVertex priorityVertex = new PriorityVertex(start, start.dist);
+        pri.offer(priorityVertex);
         while (!pri.isEmpty()) {
-            Vertex v = pri.poll();
+            PriorityVertex pv = pri.poll();
+            Vertex v = pv.vertex;
             if (!v.known) {
                 v.known = true;
                 v.adj.forEach((w, d) -> {
@@ -30,7 +52,8 @@ public class Dijkstra_Algorithm {
                         if (v.dist + d < w.dist) {
                             w.dist = v.dist + d;
                             w.path = v;
-                            pri.offer(w);
+                            PriorityVertex newPriorityVertex = new PriorityVertex(w, w.dist);
+                            pri.offer(newPriorityVertex);
                         }
                     }
                 });
@@ -66,18 +89,21 @@ public class Dijkstra_Algorithm {
     }
 
     public static void main(String[] args) {
-        Dijkstra_Algorithm dijkstra = new Dijkstra_Algorithm();
+        DijkstraAlgorithm dijkstra = new DijkstraAlgorithm();
         Vertex[] map = new Vertex[7];
-        final int max = Integer.MAX_VALUE;
+        int max = Integer.MAX_VALUE;
         for (int i = 0; i < map.length; i++) {
-            map[i] = new Vertex(false, max, null);
+            map[i] = new Vertex(false, null, max);
         }
         dijkstra.build(map);
-        PriorityQueue<Vertex> pri = new PriorityQueue<>((o1, o2) -> Integer.compare(o1.dist, o2.dist));
+        PriorityQueue<PriorityVertex> pri = new PriorityQueue<>(Comparator.comparingInt(PriorityVertex::getDist));
         for (Vertex v : map) {
-            pri.offer(v);
+            PriorityVertex priorityVertex = new PriorityVertex(v, v.dist);
+            pri.offer(priorityVertex);
         }
-        dijkstra.find(map, 0, pri);
+        int startPoint = 1;
+        Vertex start = map[startPoint];
+        dijkstra.find(start, pri);
         for (int i = 0; i < map.length; i++) {
             System.out.println("map[" + i + "]: " + map[i].dist);
         }
