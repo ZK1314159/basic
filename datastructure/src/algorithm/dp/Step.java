@@ -1,4 +1,4 @@
-package algorithm.review.dp;
+package algorithm.dp;
 
 /**
  * Description：<br>
@@ -29,7 +29,7 @@ public class Step {
 
     public static void main(String[] args) {
         Step test = new Step();
-        //45已经接近int的上限
-        System.out.println(test.count(45));
+        // 45已经接近int的上限
+        System.out.println(test.count(45)); // 1836311903
     }
 }
