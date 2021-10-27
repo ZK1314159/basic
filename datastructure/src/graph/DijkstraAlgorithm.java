@@ -113,6 +113,7 @@ public class DijkstraAlgorithm {
 
         int endPoint = 5;
         Vertex end = map[endPoint];
+        System.out.print(end.id + " ");
         while (end.path != null) {
             System.out.print(end.path.id + " ");
             end = end.path;
