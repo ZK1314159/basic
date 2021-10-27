@@ -8,9 +8,8 @@ public class UnweightedRoute {
         int dist;
         Node path;
 
-        Node(int dist, Node path) {
+        Node(int dist) {
             this.dist = dist;
-            this.path = path;
             adj = new LinkedList<>();
         }
     }
@@ -25,8 +24,8 @@ public class UnweightedRoute {
             v.adj.forEach(w -> {
                 if (w.dist == Integer.MAX_VALUE) {
                     w.dist = v.dist + 1;
-                    que.offer(w);
                     w.path = v;
+                    que.offer(w);
                 }
             });
         }
@@ -34,7 +33,7 @@ public class UnweightedRoute {
 
     private void build(Node[] map) {
         for (int i = 0; i < map.length; i++) {
-            map[i] = new Node(Integer.MAX_VALUE, null);
+            map[i] = new Node(Integer.MAX_VALUE);
         }
         map[0].adj.add(map[1]);
         map[0].adj.add(map[3]);
