@@ -1,8 +1,8 @@
-package pingan;
+package historry.exam2019.pingan;
 
 import java.util.*;
 
-public class Main {
+public class Main2 {
     private static class Node {
         List<Node> adj;
         int dist;
@@ -13,8 +13,8 @@ public class Main {
         }
     }
 
-    private void countRoad(Map<Integer, Node> map, int i) {
-        Node start = map.get(i);
+    private void countRoad(Node[] map, int i) {
+        Node start = map[i];
         start.dist = 0;
         Deque<Node> que = new ArrayDeque<>();
         que.offer(start);
@@ -29,13 +29,13 @@ public class Main {
         }
     }
 
-    private void buildMap(int[] arr, Map<Integer, Node> map, List<Integer> list) {
+    private void buildMap(int[] arr, Node[] map, List<Integer> list) {
 
         for (int i = 0; i < arr.length; i++) {
-            map.put(arr[i], new Node(Integer.MAX_VALUE));
+            map[arr[i]] = new Node(Integer.MAX_VALUE);
         }
         for (int i = 0; i < list.size(); i += 2) {
-            map.get(i).adj.add(map.get(i + 1));
+            map[list.get(i)].adj.add(map[list.get(i + 1)]);
         }
     }
 
@@ -54,18 +54,20 @@ public class Main {
         return 0;
     }
 
-    private int countLength(Map<Integer, Node> map) {
+    private int countLength(Node[] map) {
         int height = 0;
-        for (int i : map.keySet()) {
-            if (map.get(i).dist > height) {
-                height = map.get(i).dist;
+        for (Node v : map) {
+            if (v != null) {
+                if (v.dist > height) {
+                    height = v.dist;
+                }
             }
         }
         return height;
     }
 
     public static void main(String[] args) {
-        Main m = new Main();
+        Main2 m = new Main2();
         List<Integer> list = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         while (in.hasNextInt()) {
@@ -77,7 +79,8 @@ public class Main {
             }
         }
         Set<Integer> set = new HashSet<>(list);
-        Map<Integer, Node> map = new HashMap<>();
+        int max = Collections.max(set);
+        Node[] map = new Node[max + 1];
         List<Integer> tmp = new ArrayList<>(set);
         int[] arr = new int[set.size()];
         for (int i = 0; i < set.size(); i++) {

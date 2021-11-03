@@ -1,4 +1,4 @@
-package wuba;
+package historry.exam2019.wuba;
 
 import java.util.ArrayList;
 import java.util.List;

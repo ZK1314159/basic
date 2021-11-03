@@ -4,14 +4,14 @@ package sort.test;
  * Description：<br>
  *
  * @author zeng.kai <br>
- * CreateDate：2019/10/23 10:26 <br>
+ * CreateDate：historry.exam2019/10/23 10:26 <br>
  */
 public class GenericTest<K> {
     /**
      * Description: 只能处理父类的方法和变量 <br>
      *
      * @author zeng.kai <br>
-     * CreateDate: 2019/10/23 11:00 <br>
+     * CreateDate: historry.exam2019/10/23 11:00 <br>
      */
     private <T extends Parent> T testGeneric(T object) {
         object.number = 4;
