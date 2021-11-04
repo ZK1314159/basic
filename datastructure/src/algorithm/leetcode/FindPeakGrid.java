@@ -6,25 +6,18 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Description：<br>
+ * Description：
+ * 时间复杂度是o(mn)，最坏情况是一个S型的单调递增数列，这样算法会遍历所有的点
  * <br>
  * CreateDate：2021/11/3 17:19 <br>
  */
 public class FindPeakGrid {
 
-    private boolean[][] record;
-    private int xLength;
-    private int yLength;
-
     public int[] findPeakGrid(int[][] mat) {
-        record = new boolean[mat.length][mat[0].length];
-        xLength = mat[0].length;
-        yLength = mat.length;
         return findPeak(mat, 0, 0);
     }
 
     public int[] findPeak(int[][] mat, int y, int x) {
-        record[y][x] = true;
         TreeMap<Integer, int[]> map = new TreeMap<>();
 
         // 点(y,x)
@@ -34,28 +27,28 @@ public class FindPeakGrid {
 
         // 顺时针判断周围4个点
         // 考察（y - 1, x)
-        if (y != 0 && ! record[y - 1][x]) {
+        if (y != 0) {
             if (mat[y - 1][x] > mat[y][x]) {
                 map.put(mat[y - 1][x], getPosition(y - 1, x));
             }
         }
 
         // 考察（y, x + 1)
-        if (x != xLength - 1 && ! record[y][x + 1]) {
+        if (x != mat[0].length - 1) {
             if (mat[y][x + 1] > mat[y][x]) {
                 map.put(mat[y][x + 1], getPosition(y, x + 1));
             }
         }
 
         // 考察（y + 1, x)
-        if (y != yLength - 1 && ! record[y + 1][x]) {
+        if (y != mat.length - 1) {
             if (mat[y + 1][x] > mat[y][x]) {
                 map.put(mat[y + 1][x], getPosition(y + 1, x));
             }
         }
 
         // 考察（y, x - 1)
-        if (x != 0 && ! record[y][x - 1]) {
+        if (x != 0) {
             if (mat[y][x - 1] > mat[y][x]) {
                 map.put(mat[y][x - 1], getPosition(y, x - 1));
             }
