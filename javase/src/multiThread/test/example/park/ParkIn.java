@@ -1,4 +1,4 @@
-package multiThread.park;
+package multiThread.test.example.park;
 
 import java.util.Date;
 import java.util.Random;

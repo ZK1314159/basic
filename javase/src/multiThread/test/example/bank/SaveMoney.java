@@ -1,15 +1,15 @@
-package multiThread.bank;
+package multiThread.test.example.bank;
 
 /**
  * Description：<br>
  * <br>
  * CreateDate：2020/8/6 17:16 <br>
  */
-public class DrawMoney implements Runnable {
+public class SaveMoney implements Runnable {
 
     Account account;
 
-    DrawMoney(Account account) {
+    SaveMoney(Account account) {
         this.account = account;
     }
 
@@ -17,13 +17,13 @@ public class DrawMoney implements Runnable {
     public void run() {
         synchronized (account) {
             try {
-                while (account.deposit < 400) {
-                    System.out.println(Thread.currentThread().getName() + ": Money is not enough, I'm waiting! "
+                while (account.deposit > 2000) {
+                    System.out.println(Thread.currentThread().getName() + ": Money is too much, I'm waiting! "
                             + System.currentTimeMillis());
                     account.wait();
                 }
-                account.deposit -= 400;
-                System.out.println(Thread.currentThread().getName() + ": draw $400! " + System.currentTimeMillis());
+                account.deposit += 800;
+                System.out.println(Thread.currentThread().getName() + ": save $800! " + System.currentTimeMillis());
                 account.notifyAll();
             } catch (InterruptedException e) {}
         }
