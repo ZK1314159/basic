@@ -1,4 +1,4 @@
-package multiThread.test.example.park;
+package multiThread.example.park;
 
 import java.util.Date;
 import java.util.TimerTask;

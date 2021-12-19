@@ -1,4 +1,4 @@
-package multiThread.test.join;
+package multiThread.join;
 
 import java.util.ArrayList;
 import java.util.List;

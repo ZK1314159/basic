@@ -1,4 +1,4 @@
-package multiThread.test.example.park;
+package multiThread.example.park;
 
 /**
  * Description：<br>

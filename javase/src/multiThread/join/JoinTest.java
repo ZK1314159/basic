@@ -1,15 +1,15 @@
-package multiThread.test.join;
+package multiThread.join;
 
 /**
- * jion()会释放将要加入的Therad本身这把锁，可以正常运行
+ * jion()不会释放普通锁，可能会导致死锁
  * <br>
  * CreateDate：2021/12/4 17:17 <br>
  */
-public class JoinTest2 implements Runnable {
+public class JoinTest implements Runnable {
 
     private final Object object;
 
-    public JoinTest2(Object object) {
+    public JoinTest(Object object) {
         this.object = object;
     }
 
@@ -21,7 +21,7 @@ public class JoinTest2 implements Runnable {
 
         }
         System.out.println(Thread.currentThread().getName() + ": 开始执行" );
-        synchronized (this) {
+        synchronized (object) {
             for (int i = 0; i < 10; i++) {
                 String name = Thread.currentThread().getName();
                 System.out.println(name + ": " + i);
@@ -31,11 +31,11 @@ public class JoinTest2 implements Runnable {
 
     public static void main(String[] args) {
         Object object = new Object();
-        Runnable runnable = new JoinTest2(object);
+        Runnable runnable = new JoinTest(object);
         Thread thread = new Thread(runnable);
         thread.start();
         System.out.println(Thread.currentThread().getName() + ": 开始执行" );
-        synchronized (thread) {
+        synchronized (object) {
             try {
                 thread.join();
             } catch (Exception e) {

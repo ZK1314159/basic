@@ -1,4 +1,4 @@
-package multiThread.test.create;
+package multiThread.create;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
