@@ -1,4 +1,4 @@
-package multiThread;
+package multiThread.threadlocal;
 
 /**
  * Description：<br>

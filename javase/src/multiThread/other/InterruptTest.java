@@ -1,11 +1,11 @@
-package multiThread;
+package multiThread.other;
 
 /**
  * Description：<br>
  * <br>
  * CreateDate：2021/12/14 17:49 <br>
  */
-public class ParkInterruptTest {
+public class InterruptTest {
 
     public static void main(String[] args) throws Exception {
         Thread thread = new Thread(() -> {

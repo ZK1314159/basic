@@ -1,4 +1,4 @@
-package multiThread.exchanger;
+package multiThread.threadcommunication.exchanger;
 
 import java.util.concurrent.Exchanger;
 

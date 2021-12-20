@@ -1,4 +1,4 @@
-package multiThread;
+package multiThread.other;
 
 public class Singleton {
 

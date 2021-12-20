@@ -1,4 +1,4 @@
-package multiThread.example.bank;
+package multiThread.other.bank;
 
 /**
  * Description：<br>

@@ -1,4 +1,4 @@
-package multiThread.example.park_old;
+package multiThread.other.park_old;
 
 class ParkIn implements Runnable {
     private final Car car;

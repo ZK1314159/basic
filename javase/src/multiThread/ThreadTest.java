@@ -1,9 +1,19 @@
 package multiThread;
 
+import multiThread.other.Singleton;
+
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
 class ThreadTest {
     public static void main(String[] args) throws Exception {
+
+        AtomicReference<Singleton> atomicReference = new AtomicReference<>();
+//        atomicReference.compareAndSet()
+        AtomicInteger atomicInteger = new AtomicInteger();
+//        atomicInteger.compareAndSet()
+
         new Thread("新线程1") {
             public void run() {
                 for (int i = 0; i < 20; i++) {
