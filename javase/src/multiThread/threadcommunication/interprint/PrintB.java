@@ -20,9 +20,9 @@ public class PrintB implements Runnable {
                 if (!interPrintNumber.letAWork) {
                     System.out.println(Thread.currentThread().getName() + ": " + (i + 1));
                     interPrintNumber.letAWork = true;
-                    interPrintNumber.notifyAll();
                 } else {
                     try {
+                        interPrintNumber.notifyAll();
                         interPrintNumber.wait();
                     } catch (Exception e) {
                         e.printStackTrace();
