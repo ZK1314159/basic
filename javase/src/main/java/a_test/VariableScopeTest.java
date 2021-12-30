@@ -5,7 +5,7 @@ package main.java.a_test;
  *
  * @author zeng.kai <br>
  * TaskId：<br>
- * CreateDate：historry.exam2019/10/14 18:24 <br>
+ * CreateDate：main.java.historry.exam2019/10/14 18:24 <br>
  */
 public class VariableScopeTest {
     public static void main(String[] args) {

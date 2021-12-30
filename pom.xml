@@ -12,7 +12,7 @@
     <modules>
         <module>datastructure</module>
         <module>designPattern</module>
-        <module>exam</module>
+        <module>main.java.exam</module>
         <module>main.java.javase</module>
         <module>jvm</module>
         <module>work</module>
