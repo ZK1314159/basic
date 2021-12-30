@@ -1,4 +1,4 @@
-package aioproject;
+package main.java.aioproject;
 
 import java.util.*;
 

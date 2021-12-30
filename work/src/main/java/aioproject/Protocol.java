@@ -1,4 +1,4 @@
-package aioproject;
+package main.java.aioproject;
 
 public interface Protocol {
     // 定义协议字符串的长度
