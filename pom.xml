@@ -13,7 +13,7 @@
         <module>datastructure</module>
         <module>designPattern</module>
         <module>exam</module>
-        <module>javase</module>
+        <module>main.java.javase</module>
         <module>jvm</module>
         <module>work</module>
     </modules>

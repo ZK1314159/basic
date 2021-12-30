@@ -11,7 +11,7 @@
 
     <artifactId>javase</artifactId>
     <version>1.0</version>
-    <name>javase</name>
+    <name>main.java.javase</name>
 
 
     <properties>
