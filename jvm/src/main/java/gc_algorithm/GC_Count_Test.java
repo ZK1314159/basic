@@ -1,4 +1,4 @@
-package gc_algorithm;
+package main.java.gc_algorithm;
 
 /**
  * testGC()方法执行后，objA和objB会不会被GC呢？
