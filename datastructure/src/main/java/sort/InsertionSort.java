@@ -1,4 +1,4 @@
-package main.java.sort;
+package sort;
 
 public class InsertionSort<T extends Comparable<? super T>> {
     private void sort(T[] arr) {

@@ -1,4 +1,4 @@
-package main.java.multiThread.threadcommunication;
+package multiThread.threadcommunication;
 
 class ThreadCommunication extends Thread {
     private static final String st1 = "test";

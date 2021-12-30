@@ -1,4 +1,4 @@
-package main.java.multiThread.other.bank;
+package multiThread.other.bank;
 
 /**
  * Description：<br>

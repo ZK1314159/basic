@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class InnerClass_Test {
     static int k = 1;

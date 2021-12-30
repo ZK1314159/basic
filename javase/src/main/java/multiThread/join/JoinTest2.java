@@ -1,4 +1,4 @@
-package main.java.multiThread.join;
+package multiThread.join;
 
 /**
  * jion()会释放将要加入的Therad本身这把锁，可以正常运行

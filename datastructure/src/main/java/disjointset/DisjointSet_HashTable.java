@@ -1,4 +1,4 @@
-package main.java.disjointset;
+package disjointset;
 
 //自己构造了哈希表的变种处理字符串的不相交集问题，过于复杂
 public class DisjointSet_HashTable {

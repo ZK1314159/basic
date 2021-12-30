@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class ValueTransfer_Test {
     void test(String s) {

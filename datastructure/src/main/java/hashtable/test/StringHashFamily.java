@@ -1,4 +1,4 @@
-package main.java.hashtable.test;
+package hashtable.test;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package main.java.algorithm.dp;
+package algorithm.dp;
 
 /**
  * Description：<br>

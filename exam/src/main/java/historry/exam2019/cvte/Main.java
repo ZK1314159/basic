@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.cvte;
+package historry.exam2019.cvte;
 
 import java.util.*;
 

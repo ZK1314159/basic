@@ -1,4 +1,4 @@
-package main.java.observer;
+package observer;
 
 import java.util.Date;
 import java.util.Observable;

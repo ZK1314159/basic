@@ -1,4 +1,4 @@
-package main.java.a_test;
+package a_test;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Description：<br>
  * <br>
- * CreateDate：main.java.historry.exam2019/12/10 9:43 <br>
+ * CreateDate：historry.exam2019/12/10 9:43 <br>
  */
 public class ForEachTest {
     public static void main(String[] args) {

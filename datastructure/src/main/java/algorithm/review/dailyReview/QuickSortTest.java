@@ -1,4 +1,4 @@
-package main.java.algorithm.review.dailyReview;
+package algorithm.review.dailyReview;
 
 /**
  * Description：<br>

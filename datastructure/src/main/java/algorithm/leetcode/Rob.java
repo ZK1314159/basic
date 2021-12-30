@@ -1,4 +1,4 @@
-package main.java.algorithm.leetcode;
+package algorithm.leetcode;
 
 /**
  * Description：leetcode_198

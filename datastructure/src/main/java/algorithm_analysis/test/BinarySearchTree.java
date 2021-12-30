@@ -1,4 +1,4 @@
-package main.java.algorithm_analysis.test;// BinarySearchTree class
+package algorithm_analysis.test;// BinarySearchTree class
 //
 // CONSTRUCTION: with no initializer
 //
@@ -10,26 +10,26 @@ package main.java.algorithm_analysis.test;// BinarySearchTree class
 // Comparable findMax( )  --> Return largest item
 // boolean isEmpty( )     --> Return true if empty; else false
 // void makeEmpty( )      --> Remove all items
-// void printTree( )      --> Print main.java.tree in sorted order
+// void printTree( )      --> Print tree in sorted order
 // ******************ERRORS********************************
 // Throws UnderflowException as appropriate
 
 /**
- * Implements an unbalanced binary search main.java.tree.
+ * Implements an unbalanced binary search tree.
  * Note that all "matching" is based on the compareTo method.
  *
  * @author Mark Allen Weiss
  */
 public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     /**
-     * Construct the main.java.tree.
+     * Construct the tree.
      */
     public BinarySearchTree() {
         root = null;
     }
 
     /**
-     * Insert into the main.java.tree; duplicates are ignored.
+     * Insert into the tree; duplicates are ignored.
      *
      * @param x the item to insert.
      */
@@ -38,7 +38,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Remove from the main.java.tree. Nothing is done if x is not found.
+     * Remove from the tree. Nothing is done if x is not found.
      *
      * @param x the item to remove.
      */
@@ -47,7 +47,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Find the smallest item in the main.java.tree.
+     * Find the smallest item in the tree.
      *
      * @return smallest item or null if empty.
      */
@@ -58,7 +58,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Find the largest item in the main.java.tree.
+     * Find the largest item in the tree.
      *
      * @return the largest item of null if empty.
      */
@@ -69,7 +69,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Find an item in the main.java.tree.
+     * Find an item in the tree.
      *
      * @param x the item to search for.
      * @return true if not found.
@@ -79,14 +79,14 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Make the main.java.tree logically empty.
+     * Make the tree logically empty.
      */
     public void makeEmpty() {
         root = null;
     }
 
     /**
-     * Test if the main.java.tree is logically empty.
+     * Test if the tree is logically empty.
      *
      * @return true if empty, false otherwise.
      */
@@ -95,10 +95,10 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Print the main.java.tree contents in sorted order.
+     * Print the tree contents in sorted order.
      */
     public void printTree() {
-        if (isEmpty()) System.out.println("Empty main.java.tree");
+        if (isEmpty()) System.out.println("Empty tree");
         else printTree(root);
     }
 
@@ -226,7 +226,7 @@ public class BinarySearchTree<AnyType extends Comparable<? super AnyType>> {
 
 
     /**
-     * The main.java.tree root.
+     * The tree root.
      */
     private BinaryNode<AnyType> root;
 

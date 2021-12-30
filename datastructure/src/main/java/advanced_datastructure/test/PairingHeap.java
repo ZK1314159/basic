@@ -1,4 +1,4 @@
-package main.java.advanced_datastructure.test;
+package advanced_datastructure.test;
 
 import java.util.*;
 
@@ -19,7 +19,7 @@ import java.util.*;
 // Exceptions thrown for various operations
 
 /**
- * Implements a pairing main.java.heap.
+ * Implements a pairing heap.
  * Supports a decreaseKey operation.
  * Note that all "matching" is based on the compareTo method.
  *
@@ -41,7 +41,7 @@ public class PairingHeap<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Construct the pairing main.java.heap.
+     * Construct the pairing heap.
      */
     public PairingHeap() {
         root = null;
@@ -70,7 +70,7 @@ public class PairingHeap<AnyType extends Comparable<? super AnyType>> {
      * Find the smallest item in the priority queue.
      *
      * @return the smallest item.
-     * //@throws UnderflowException if pairing main.java.heap is empty.
+     * //@throws UnderflowException if pairing heap is empty.
      */
     public AnyType findMin() {
         if (isEmpty()) {
@@ -86,7 +86,7 @@ public class PairingHeap<AnyType extends Comparable<? super AnyType>> {
      * Remove the smallest item from the priority queue.
      *
      * @return the smallest item.
-     * //@throws UnderflowException if pairing main.java.heap is empty.
+     * //@throws UnderflowException if pairing heap is empty.
      */
     public AnyType deleteMin() {
         if (isEmpty()) {
@@ -106,7 +106,7 @@ public class PairingHeap<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Change the value of the item stored in the pairing main.java.heap.
+     * Change the value of the item stored in the pairing heap.
      *
      * @param pos    any Position returned by insert.
      * @param newVal the new value, which must be smaller
@@ -196,12 +196,12 @@ public class PairingHeap<AnyType extends Comparable<? super AnyType>> {
 
     /**
      * Internal method that is the basic operation to maintain order.
-     * Links first and second together to satisfy main.java.heap order.
+     * Links first and second together to satisfy heap order.
      *
-     * @param first  root of main.java.tree 1, which may not be null.
+     * @param first  root of tree 1, which may not be null.
      *               first.nextSibling MUST be null on entry.
-     * @param second root of main.java.tree 2, which may be null.
-     * @return result of the main.java.tree merge.
+     * @param second root of tree 2, which may be null.
+     * @return result of the tree merge.
      */
     private PairNode<AnyType> compareAndLink(PairNode<AnyType> first, PairNode<AnyType> second) {
         if (second == null) return first;
@@ -237,7 +237,7 @@ public class PairingHeap<AnyType extends Comparable<? super AnyType>> {
         return array;
     }
 
-    // The main.java.tree array for combineSiblings
+    // The tree array for combineSiblings
     private PairNode<AnyType>[] treeArray = new PairNode[5];
 
     /**
@@ -270,7 +270,7 @@ public class PairingHeap<AnyType extends Comparable<? super AnyType>> {
         int j = i - 2;
         if (j == numSiblings - 3) treeArray[j] = compareAndLink(treeArray[j], treeArray[j + 2]);
 
-        // Now go right to left, merging last main.java.tree with
+        // Now go right to left, merging last tree with
         // next to last. The result becomes the new last.
         for (; j >= 2; j -= 2)
             treeArray[j - 2] = compareAndLink(treeArray[j - 2], treeArray[j]);

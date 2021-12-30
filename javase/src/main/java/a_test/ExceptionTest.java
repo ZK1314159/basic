@@ -1,11 +1,11 @@
-package main.java.a_test;
+package a_test;
 
 /**
  * Description：<br>
  *
  * @author zeng.kai <br>
  * TaskId：<br>
- * CreateDate：main.java.historry.exam2019/10/7 15:13 <br>
+ * CreateDate：historry.exam2019/10/7 15:13 <br>
  */
 public class ExceptionTest {
     private int id;

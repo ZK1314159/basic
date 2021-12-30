@@ -1,4 +1,4 @@
-package main.java.hashtable.test;
+package hashtable.test;
 
 import java.util.Random;
 
@@ -261,7 +261,7 @@ public class CuckooHashTable<AnyType> {
 
     /**
      * Internal method to test if a number is prime.
-     * Not an efficient main.java.algorithm.
+     * Not an efficient algorithm.
      *
      * @param n the number to test.
      * @return the result of the test.

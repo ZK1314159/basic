@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.pingan;
+package historry.exam2019.pingan;
 
 import java.util.*;
 

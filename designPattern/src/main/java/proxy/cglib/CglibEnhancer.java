@@ -1,4 +1,4 @@
-package main.java.proxy.cglib;
+package proxy.cglib;
 
 /**
  * Description：<br>

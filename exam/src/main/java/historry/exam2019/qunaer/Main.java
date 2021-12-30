@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.qunaer;
+package historry.exam2019.qunaer;
 
 import java.util.*;
 

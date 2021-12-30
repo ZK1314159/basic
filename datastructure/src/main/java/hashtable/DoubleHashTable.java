@@ -1,4 +1,4 @@
-package main.java.hashtable;
+package hashtable;
 
 class DoubleHashTable<T> {
     static final int intCapacity = 10;

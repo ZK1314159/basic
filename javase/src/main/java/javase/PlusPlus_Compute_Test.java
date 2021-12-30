@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class PlusPlus_Compute_Test {
     public static void main(String[] args) {

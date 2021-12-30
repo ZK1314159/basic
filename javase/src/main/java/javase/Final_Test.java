@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class Final_Test {
     private int i = 1;

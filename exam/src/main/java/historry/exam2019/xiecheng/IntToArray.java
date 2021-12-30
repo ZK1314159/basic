@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.xiecheng;
+package historry.exam2019.xiecheng;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.yidianzixun;
+package historry.exam2019.yidianzixun;
 
 import java.util.*;
 

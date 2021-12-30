@@ -1,4 +1,4 @@
-package main.java.algorithm.review.dailyReview;
+package algorithm.review.dailyReview;
 
 /**
  * Description：<br>
@@ -25,12 +25,12 @@ public class HeapSort {
     }
 
     void sort(int[] array) {
-        //build main.java.heap
+        //build heap
         for (int i = (array.length - 1 - 2) / 2; i >= 0; i--) {
             filterDown(i, array.length - 1, array);
         }
 
-        //main.java.sort
+        //sort
         for (int i = array.length - 1; i > 0; i--) {
             int tmp = array[i];
             array[i] = array[0];

@@ -1,4 +1,4 @@
-package main.java.algorithm.review;
+package algorithm.review;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

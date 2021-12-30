@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 class SuperClass {
     static int j = 4;

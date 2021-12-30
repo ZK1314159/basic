@@ -1,4 +1,4 @@
-package main.java.multiThread;
+package multiThread;
 
 class ThreadTest {
 

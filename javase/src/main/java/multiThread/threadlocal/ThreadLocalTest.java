@@ -1,4 +1,4 @@
-package main.java.multiThread.threadlocal;
+package multiThread.threadlocal;
 
 /**
  * Description：<br>

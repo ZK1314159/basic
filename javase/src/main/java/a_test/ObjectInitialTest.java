@@ -1,4 +1,4 @@
-package main.java.a_test;
+package a_test;
 
 /**
  * Description：<br>

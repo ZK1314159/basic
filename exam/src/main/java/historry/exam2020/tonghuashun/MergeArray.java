@@ -1,4 +1,4 @@
-package main.java.historry.exam2020.tonghuashun;
+package historry.exam2020.tonghuashun;
 
 /**
  * Description：<br>

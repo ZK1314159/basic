@@ -1,4 +1,4 @@
-package main.java.algorithm_analysis.test;
+package algorithm_analysis.test;
 
 import java.util.Random;
 
@@ -10,7 +10,7 @@ public final class MaxSumTest {
     static private int seqEnd = -1;
 
     /**
-     * Cubic maximum contiguous subsequence sum main.java.algorithm.
+     * Cubic maximum contiguous subsequence sum algorithm.
      * seqStart and seqEnd represent the actual best sequence.
      */
     public static int maxSubSum1(int[] a) {
@@ -34,7 +34,7 @@ public final class MaxSumTest {
     }
 
     /**
-     * Quadratic maximum contiguous subsequence sum main.java.algorithm.
+     * Quadratic maximum contiguous subsequence sum algorithm.
      * seqStart and seqEnd represent the actual best sequence.
      */
     public static int maxSubSum2(int[] a) {
@@ -57,7 +57,7 @@ public final class MaxSumTest {
     }
 
     /**
-     * Linear-time maximum contiguous subsequence sum main.java.algorithm.
+     * Linear-time maximum contiguous subsequence sum algorithm.
      * seqStart and seqEnd represent the actual best sequence.
      */
     public static int maxSubSum4(int[] a) {
@@ -82,7 +82,7 @@ public final class MaxSumTest {
 
 
     /**
-     * Recursive maximum contiguous subsequence sum main.java.algorithm.
+     * Recursive maximum contiguous subsequence sum algorithm.
      * Finds maximum sum in subarray spanning a[left..right].
      * Does not attempt to maintain actual best sequence.
      */
@@ -119,7 +119,7 @@ public final class MaxSumTest {
 
     /**
      * Driver for divide-and-conquer maximum contiguous
-     * subsequence sum main.java.algorithm.
+     * subsequence sum algorithm.
      */
     public static int maxSubSum3(int[] a) {
         return a.length > 0 ? maxSumRec(a, 0, a.length - 1) : 0;

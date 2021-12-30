@@ -1,4 +1,4 @@
-package main.java.multiThread.join;
+package multiThread.join;
 
 import java.util.ArrayList;
 import java.util.List;

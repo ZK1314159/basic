@@ -1,4 +1,4 @@
-package main.java.multiThread.semaphore;
+package multiThread.semaphore;
 
 import java.util.concurrent.Semaphore;
 

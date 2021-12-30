@@ -1,4 +1,4 @@
-package main.java.proxy.jdk;
+package proxy.jdk;
 
 /**
  * Description：<br>

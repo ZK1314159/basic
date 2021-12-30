@@ -1,4 +1,4 @@
-package main.java.reflection;
+package reflection;
 
 public class GetClass_Test {
 

@@ -1,4 +1,4 @@
-package main.java.sort;
+package sort;
 
 public class MergeSort<T extends Comparable<? super T>> {
     //@SuppressWarnings("unchecked")

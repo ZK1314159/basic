@@ -1,4 +1,4 @@
-package main.java.multiThread.threadcommunication.interprint;
+package multiThread.threadcommunication.interprint;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;

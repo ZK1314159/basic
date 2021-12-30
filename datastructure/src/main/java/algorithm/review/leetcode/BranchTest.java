@@ -1,4 +1,4 @@
-package main.java.algorithm.review.leetcode;
+package algorithm.review.leetcode;
 
 /**
  * Description：<br>

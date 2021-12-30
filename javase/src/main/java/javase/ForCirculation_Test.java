@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class ForCirculation_Test {
     public static void main(String[] args) {

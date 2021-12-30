@@ -1,9 +1,9 @@
-package main.java.a_test;
+package a_test;
 
 /**
  * Description：<br>
  *
- * CreateDate：main.java.historry.exam2019/10/28 14:24 <br>
+ * CreateDate：historry.exam2019/10/28 14:24 <br>
  */
 public class StringTest {
     String string = "test";

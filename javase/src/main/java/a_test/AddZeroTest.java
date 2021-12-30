@@ -1,4 +1,4 @@
-package main.java.a_test;
+package a_test;
 
 /**
  * Description：<br>
@@ -13,7 +13,7 @@ public class AddZeroTest {
 //        List<Integer> list = new ArrayList<>();
 //        list.toArray();
         //TreeMap
-        //Collections.main.java.sort();
+        //Collections.sort();
         //FutureTask
 
         //HashMap

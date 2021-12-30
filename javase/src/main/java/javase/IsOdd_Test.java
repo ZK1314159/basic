@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class IsOdd_Test {
     private int count(int n) {

@@ -1,4 +1,4 @@
-package main.java.multiThread.join;
+package multiThread.join;
 
 /**
  * jion()不会释放普通锁，可能会导致死锁

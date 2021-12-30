@@ -1,4 +1,4 @@
-package main.java.multiThread.create;
+package multiThread.create;
 
 /**
  * Description：<br>

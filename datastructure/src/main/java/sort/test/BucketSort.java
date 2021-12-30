@@ -1,4 +1,4 @@
-package main.java.sort.test;
+package sort.test;
 
 class BucketSort {
     private void bucket(int[] data) {

@@ -1,4 +1,4 @@
-package main.java.factory.abstractFactory;
+package factory.abstractFactory;
 
 /**
  * Description：<br>

@@ -1,4 +1,4 @@
-package main.java.singleton;
+package singleton;
 
 /**
  * Description：<br>

@@ -1,4 +1,4 @@
-package main.java.sort;
+package sort;
 
 public class BubbleSort {
     private void sort(int[] arr) {

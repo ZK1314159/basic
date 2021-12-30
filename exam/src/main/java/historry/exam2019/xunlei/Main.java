@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.xunlei;
+package historry.exam2019.xunlei;
 
 import java.util.Scanner;
 

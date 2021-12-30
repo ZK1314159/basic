@@ -1,4 +1,4 @@
-package main.java.multiThread.threadcommunication;
+package multiThread.threadcommunication;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

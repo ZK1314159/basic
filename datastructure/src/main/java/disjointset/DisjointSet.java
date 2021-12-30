@@ -1,4 +1,4 @@
-package main.java.disjointset;
+package disjointset;
 
 public class DisjointSet {
     private int[] arr;

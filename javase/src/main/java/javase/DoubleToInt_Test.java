@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class DoubleToInt_Test {
     private boolean test(int n) {

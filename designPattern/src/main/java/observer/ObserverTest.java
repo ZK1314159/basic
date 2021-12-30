@@ -1,4 +1,4 @@
-package main.java.observer;
+package observer;
 
 /**
  * Description：<br>

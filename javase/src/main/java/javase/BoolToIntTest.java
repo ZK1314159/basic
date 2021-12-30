@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 /**
  * Description：<br>

@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.yonyou;
+package historry.exam2019.yonyou;
 
 import java.util.Scanner;
 

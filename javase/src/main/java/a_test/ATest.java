@@ -1,4 +1,4 @@
-package main.java.a_test;
+package a_test;
 
 public class ATest {
     private  String s;
@@ -14,7 +14,7 @@ public class ATest {
         }
         int[] array = {1, 6, 5, 8, 9};
         int[] skf = Arrays.copyOf(array, array.length);
-        Arrays.main.java.sort(skf);
+        Arrays.sort(skf);
         for(int i : skf){
             System.out.print(i + " ");
         }

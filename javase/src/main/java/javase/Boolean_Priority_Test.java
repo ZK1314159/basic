@@ -1,4 +1,4 @@
-package main.java.javase;
+package javase;
 
 public class Boolean_Priority_Test {
     public static void main(String[] args) {

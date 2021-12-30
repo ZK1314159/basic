@@ -1,4 +1,4 @@
-package main.java.aioproject;
+package aioproject;
 
 import java.net.*;
 import java.nio.*;

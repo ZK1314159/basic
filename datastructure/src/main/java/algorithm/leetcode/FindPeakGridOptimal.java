@@ -1,4 +1,4 @@
-package main.java.algorithm.leetcode;
+package algorithm.leetcode;
 
 import java.io.FileReader;
 import java.io.IOException;

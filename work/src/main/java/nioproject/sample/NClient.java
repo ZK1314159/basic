@@ -1,4 +1,4 @@
-package main.java.nioproject.sample;
+package nioproject.sample;
 
 import java.util.*;
 import java.net.*;

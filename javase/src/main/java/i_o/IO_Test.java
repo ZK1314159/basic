@@ -1,11 +1,11 @@
-package main.java.i_o;
+package i_o;
 
 import java.io.FileReader;
 import java.io.IOException;
 
 public class IO_Test {
     public static void main(String[] args) throws IOException {
-        FileReader inPut = new FileReader("datastructure\\src" + "\\main.java.a_test\\test.IO_Test.java");
+        FileReader inPut = new FileReader("datastructure\\src" + "\\a_test\\test.IO_Test.java");
         //FileWriter outPut = new FileWriter("C:\\Users\\Administrator" +
         // "\\Desktop\\Test.txt");
         char[] ch = new char[32];

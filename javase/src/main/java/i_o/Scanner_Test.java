@@ -1,4 +1,4 @@
-package main.java.i_o;
+package i_o;
 
 import java.util.Scanner;
 

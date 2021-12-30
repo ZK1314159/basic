@@ -1,4 +1,4 @@
-package main.java.multiThread.other.park;
+package multiThread.other.park;
 
 import java.util.Timer;
 

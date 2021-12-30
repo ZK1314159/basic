@@ -1,4 +1,4 @@
-package main.java.classload;
+package classload;
 
 /**
  * Description

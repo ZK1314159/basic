@@ -1,4 +1,4 @@
-package main.java.historry.exam2019.sougou;
+package historry.exam2019.sougou;
 
 import java.util.*;
 

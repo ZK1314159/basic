@@ -1,8 +1,8 @@
-package main.java.algorithm.leetcode;
+package algorithm.leetcode;
 
 import java.util.Arrays;
 
-import main.java.sort.Sort;
+import sort.Sort;
 
 /**
  * Description：<br>

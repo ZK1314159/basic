@@ -1,4 +1,4 @@
-package main.java.hashtable;
+package hashtable;
 
 class QuadraticProbingHashTable<T> {
     private static final int intCapacity = 10;

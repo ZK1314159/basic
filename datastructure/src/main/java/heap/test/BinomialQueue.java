@@ -1,4 +1,4 @@
-package main.java.heap.test;
+package heap.test;
 
 //BinomialQueue class
 //
@@ -10,7 +10,7 @@ package main.java.heap.test;
 //Comparable findMin( )  --> Return smallest item
 //boolean isEmpty( )     --> Return true if empty; else false
 //void makeEmpty( )      --> Remove all items
-//vod merge( rhs )       --> Absord rhs into this main.java.heap
+//vod merge( rhs )       --> Absord rhs into this heap
 //******************ERRORS********************************
 //Throws UnderflowException as appropriate
 
@@ -123,7 +123,7 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
     }
 
     /**
-     * Insert into the priority queue, maintaining main.java.heap order.
+     * Insert into the priority queue, maintaining heap order.
      * This implementation is not optimized for O(1) performance.
      *
      * @param x the item to insert.
@@ -146,10 +146,10 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
 
     /**
-     * Find index of main.java.tree containing the smallest item in the priority queue.
+     * Find index of tree containing the smallest item in the priority queue.
      * The priority queue must not be empty.
      *
-     * @return the index of main.java.tree containing the smallest item.
+     * @return the index of tree containing the smallest item.
      */
     private int findMinIndex() {
         int i;
@@ -236,7 +236,7 @@ public final class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
     private static final int DEFAULT_TREES = 1;
 
     private int currentSize;                // # items in priority queue
-    private BinNode<AnyType>[] theTrees;  // An array of main.java.tree roots
+    private BinNode<AnyType>[] theTrees;  // An array of tree roots
 
 
     /**

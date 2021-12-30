@@ -1,4 +1,4 @@
-package main.java.heap;
+package heap;
 
 public class BinaryHeap<T extends Comparable<? super T>> {
     private static final int DefaultSize = 20;

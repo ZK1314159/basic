@@ -1,4 +1,4 @@
-package main.java.runtime_data_areas;
+package runtime_data_areas;
 
 public class Intern_Test {
     public static void main(String[] args) {
