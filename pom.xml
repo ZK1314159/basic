@@ -12,8 +12,8 @@
     <modules>
         <module>datastructure</module>
         <module>designPattern</module>
-        <module>main.java.exam</module>
-        <module>main.java.javase</module>
+        <module>exam</module>
+        <module>javase</module>
         <module>jvm</module>
         <module>work</module>
     </modules>
