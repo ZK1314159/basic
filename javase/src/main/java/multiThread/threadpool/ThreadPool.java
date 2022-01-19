@@ -17,14 +17,14 @@ public class ThreadPool {
                         new ThreadPoolExecutor.CallerRunsPolicy());
         Thread thread = new Thread(() -> {
             try {
-                System.out.println(Thread.currentThread().getName() + " is running...");
-                Thread.sleep(10000);
+//                System.out.println(Thread.currentThread().getName() + " is running...");
+                Thread.sleep(100);
                 System.out.println(Thread.currentThread().getName() + " finish");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         });
-        for (int i = 0; i < 26; i++) {
+        for (int i = 0; i < 56; i++) {
             threadPoolExecutor.submit(thread);
         }
         System.out.println(Thread.currentThread().getName() + " do work");

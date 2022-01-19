@@ -1,4 +1,4 @@
-package historry.exam2019.wangyi;
+package historry.exam2018.wangyi;
 
 import java.util.Scanner;
 
