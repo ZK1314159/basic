@@ -48,16 +48,14 @@ public class DijkstraAlgorithm {
         while (!pri.isEmpty()) {
             PriorityVertex pv = pri.poll();
             Vertex v = pv.vertex;
-            if (!v.known) {
+            if (! v.known) {
                 v.known = true;
                 v.adj.forEach((w, d) -> {
-                    if (!w.known) {
-                        if (v.dist + d < w.dist) {
-                            w.dist = v.dist + d;
-                            w.path = v;
-                            PriorityVertex newPriorityVertex = new PriorityVertex(w, w.dist);
-                            pri.offer(newPriorityVertex);
-                        }
+                    if (! w.known && v.dist + d < w.dist) {
+                        w.dist = v.dist + d;
+                        w.path = v;
+                        PriorityVertex newPriorityVertex = new PriorityVertex(w, w.dist);
+                        pri.offer(newPriorityVertex);
                     }
                 });
             }
@@ -65,30 +63,18 @@ public class DijkstraAlgorithm {
     }
 
     private void build(Vertex[] map) {
-        Map<Vertex, Integer> tmp = new HashMap<>();
-        tmp.put(map[1], 2);
-        tmp.put(map[3], 1);
-        map[0].adj.putAll(tmp);
-        tmp.clear();
-        tmp.put(map[3], 3);
-        tmp.put(map[4], 10);
-        map[1].adj.putAll(tmp);
-        tmp.clear();
-        tmp.put(map[0], 4);
-        tmp.put(map[5], 5);
-        map[2].adj.putAll(tmp);
-        tmp.clear();
-        tmp.put(map[2], 2);
-        tmp.put(map[4], 2);
-        tmp.put(map[5], 8);
-        tmp.put(map[6], 4);
-        map[3].adj.putAll(tmp);
-        tmp.clear();
-        tmp.put(map[6], 6);
-        map[4].adj.putAll(tmp);
-        tmp.clear();
-        tmp.put(map[5], 1);
-        map[6].adj.putAll(tmp);
+        map[0].adj.put(map[1], 2);
+        map[0].adj.put(map[3], 1);
+        map[1].adj.put(map[3], 3);
+        map[1].adj.put(map[4], 10);
+        map[2].adj.put(map[0], 4);
+        map[2].adj.put(map[5], 5);
+        map[3].adj.put(map[2], 2);
+        map[3].adj.put(map[4], 2);
+        map[3].adj.put(map[5], 8);
+        map[3].adj.put(map[6], 4);
+        map[4].adj.put(map[6], 6);
+        map[6].adj.put(map[5], 1);
     }
 
     public static void main(String[] args) {
@@ -104,7 +90,7 @@ public class DijkstraAlgorithm {
             PriorityVertex priorityVertex = new PriorityVertex(v, v.dist);
             pri.offer(priorityVertex);
         }
-        int startPoint = 1;
+        int startPoint = 0;
         Vertex start = map[startPoint];
         dijkstra.find(start, pri);
         for (int i = 0; i < map.length; i++) {
