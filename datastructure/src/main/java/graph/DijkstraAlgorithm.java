@@ -9,32 +9,22 @@ import java.util.*;
 public class DijkstraAlgorithm {
 
     private static class Vertex {
-
-        Map<Vertex, Integer> adj;
+        Map<Vertex, Integer> adj = new HashMap<>();
         boolean known;
         Vertex path;
-        int dist;
+        int dist = Integer.MAX_VALUE;
         int id;
-
-        Vertex(boolean known, Vertex path, int dist, int id) {
-            this.known = known;
-            this.path = path;
-            this.dist = dist;
+        Vertex(int id) {
             this.id = id;
-            adj = new HashMap<>();
         }
-
     }
 
     private static class PriorityVertex {
-
         Vertex vertex;
         int dist;
-
         int getDist() {
             return this.dist;
         }
-
         PriorityVertex(Vertex vertex, int dist) {
             this.vertex = vertex;
             this.dist = dist;
@@ -62,7 +52,11 @@ public class DijkstraAlgorithm {
         }
     }
 
-    private void build(Vertex[] map) {
+    private void build(Vertex[] map, PriorityQueue<PriorityVertex> pri) {
+        for (int i = 0; i < map.length; i++) {
+            map[i] = new Vertex(i + 1);
+            pri.offer(new PriorityVertex(map[i], map[i].dist));
+        }
         map[0].adj.put(map[1], 2);
         map[0].adj.put(map[3], 1);
         map[1].adj.put(map[3], 3);
@@ -77,28 +71,10 @@ public class DijkstraAlgorithm {
         map[6].adj.put(map[5], 1);
     }
 
-    public static void main(String[] args) {
-        DijkstraAlgorithm dijkstra = new DijkstraAlgorithm();
-        Vertex[] map = new Vertex[7];
-        int max = Integer.MAX_VALUE;
-        for (int i = 0; i < map.length; i++) {
-            map[i] = new Vertex(false, null, max, i + 1);
-        }
-        dijkstra.build(map);
-        PriorityQueue<PriorityVertex> pri = new PriorityQueue<>(Comparator.comparingInt(PriorityVertex::getDist));
-        for (Vertex v : map) {
-            PriorityVertex priorityVertex = new PriorityVertex(v, v.dist);
-            pri.offer(priorityVertex);
-        }
-        int startPoint = 0;
-        Vertex start = map[startPoint];
-        dijkstra.find(start, pri);
+    void print(Vertex[] map, Vertex end) {
         for (int i = 0; i < map.length; i++) {
             System.out.println("map[" + i + "]: " + map[i].dist);
         }
-
-        int endPoint = 5;
-        Vertex end = map[endPoint];
         System.out.print(end.id + " ");
         while (end.path != null) {
             System.out.print(end.path.id + " ");
@@ -106,4 +82,14 @@ public class DijkstraAlgorithm {
         }
         System.out.println(" ");
     }
+
+    public static void main(String[] args) {
+        DijkstraAlgorithm dijkstra = new DijkstraAlgorithm();
+        Vertex[] map = new Vertex[7];
+        PriorityQueue<PriorityVertex> pri = new PriorityQueue<>(Comparator.comparingInt(PriorityVertex::getDist));
+        dijkstra.build(map, pri);
+        dijkstra.find(map[0], pri);
+        dijkstra.print(map, map[5]);
+    }
+
 }
