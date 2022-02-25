@@ -1,4 +1,4 @@
-package historry.exam2022;
+package historry.exam2022.didi;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
