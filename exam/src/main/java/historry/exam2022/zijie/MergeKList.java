@@ -1,4 +1,4 @@
-package exam;
+package historry.exam2022.zijie;
 
 import java.util.ArrayList;
 import java.util.Arrays;
