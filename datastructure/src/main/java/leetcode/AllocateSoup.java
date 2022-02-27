@@ -1,4 +1,4 @@
-package algorithm.leetcode;
+package leetcode;
 
 /**
  * Description：<br>
