@@ -6,10 +6,10 @@ package historry.exam2022.zijie;
  * CreateDate：2022/2/24 19:07 <br>
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
     ListNode() {}
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
     ListNode(int val, ListNode next) {
