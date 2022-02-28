@@ -14,9 +14,9 @@ public class AddTwoNumber {
         ListNode tail = l1;
         ListNode head = tail;
 
-        while (l1 != null && l2 != null) {
-            int a = l1.val;
-            int b = l2.val;
+        while (l1 != null || l2 != null) {
+            int a = l1 == null ? 0 : l1.val;
+            int b = l2 == null ? 0 : l2.val;
             int sum = a + b + before;
             if (sum >= 10) {
                 sum -= 10;
@@ -26,49 +26,26 @@ public class AddTwoNumber {
             }
             tail.val = sum;
 
-            l1 = l1.next;
-            l2 = l2.next;
+            if (l1 != null) {
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                l2 = l2.next;
+            }
+
             if (l1 == null && l2 == null) {
                 if (before == 1) {
                     tail.next = new ListNode(1);
-                    tail = tail.next;
-                    before = 0;
+                    break;
                 }
-                break;
             }
 
             if (l1 == null) {
                 tail.next = l2;
-                tail = tail.next;
-                break;
-            }
-            if (l2 == null) {
+            } else {
                 tail.next = l1;
-                tail = tail.next;
-                break;
             }
-
             tail = tail.next;
-        }
-
-        while (tail != null) {
-            int a = tail.val;
-            int sum = a + before;
-            if (sum >= 10) {
-                before = 1;
-                sum -= 10;
-            } else {
-                before = 0;
-            }
-            tail.val = sum;
-            if (tail.next == null) {
-                if (before == 1) {
-                    tail.next = new ListNode(1);
-                }
-                break;
-            } else {
-                tail = tail.next;
-            }
         }
 
         return head;
