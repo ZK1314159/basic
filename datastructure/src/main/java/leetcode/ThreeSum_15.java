@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * <br>
  * CreateDate：2022/3/3 16:12 <br>
  */
-public class MaxArea_15 {
+public class ThreeSum_15 {
 
     public List<List<Integer>> threeSum(int[] nums) {
         if (nums.length <= 2 ) {
@@ -167,7 +167,7 @@ public class MaxArea_15 {
 //        int[] sample = new int[] {34,55,79,28,46,33,2,48,31,-3,84,71,52,-3,93,15,21,-43,57,-6,86,56,94,74,83,-14,28,
 //                -66,46,-49,62,-11,43,65,77,12,47,61,26,1,13,29,55,-82,76,26,15,-29,36,-29,10,-70,69,17,49};
         int[] sample = new int[] {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
-        MaxArea_15 test = new MaxArea_15();
+        ThreeSum_15 test = new ThreeSum_15();
         List<List<Integer>> result = test.threeSum(sample);
         test.sortResult(result);
         test.print(result);
