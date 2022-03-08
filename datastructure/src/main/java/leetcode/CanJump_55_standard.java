@@ -2,7 +2,11 @@ package leetcode;
 
 /**
  * Description：<br>
- * <br>
+ * 20:17 开始看题
+ * 20:28 想到大致算法
+ * 20:44 写完算法
+ * 20:50 算法AC
+ * 21:10 官方算法AC
  * CreateDate：2022/3/8 20:29 <br>
  */
 public class CanJump_55_standard {
