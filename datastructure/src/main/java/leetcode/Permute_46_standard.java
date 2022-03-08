@@ -6,6 +6,11 @@ import java.util.List;
 /**
  * Description：<br>
  * <br>
+ * 11:21开始读题
+ * 11:33想好算法
+ * 11:51写完算法
+ * 12:05算法AC
+ * 12:34官方算法AC
  * CreateDate：2022/3/8 11:34 <br>
  */
 public class Permute_46_standard {
