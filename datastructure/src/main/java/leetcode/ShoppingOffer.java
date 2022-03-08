@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Description：<br>
+ * LeetCode 638. 大礼包
  * 在 LeetCode 商店中， 有 n 件在售的物品。每件物品都有对应的价格。然而，也有一些大礼包，每个大礼包以优惠的价格捆绑销售一组物品。
  * 给你一个整数数组 price 表示物品价格，其中 price[i] 是第 i 件物品的价格。另有一个整数数组 needs 表示购物清单，
  * 其中 needs[i] 是需要购买第 i 件物品的数量。
