@@ -30,7 +30,7 @@ public class FindKLargeNumberInIterator {
 
         // 计算最大迭代次数
         int count = (int) Math.ceil(Math.log(Math.pow(3, Math.log(n + 1) / Math.log(2)) + 1) / Math.log(2) - 1);
-//        int count2 = (int) Math.ceil(Math.log(n + 1) / Math.log(2) * Math.log(3) / Math.log(2) );
+//        int count2 = (int) Math.ceil(Math.log(n + 1) / Math.log(2) * Math.log(3) / Math.log(2));
         int start = 1;
         int max;
         list.add(start);
@@ -52,7 +52,9 @@ public class FindKLargeNumberInIterator {
         recursive(start, count);
         // 寻找第K大的元素, 理论上复杂度是n, 为了简化表示直接用系统排序方式n*log(n)
         list = list.stream().sorted().collect(Collectors.toList());
-        max = list.get(n);
+        int min = list.get(0);
+        int newMax = list.get(list.size() - 1);
+        max = list.get(n - 1);
 
         return max;
     }
@@ -114,6 +116,8 @@ public class FindKLargeNumberInIterator {
 
     public static void main(String[] args) {
         FindKLargeNumberInIterator findKLargeNumberInIterator = new FindKLargeNumberInIterator();
-        int result = findKLargeNumberInIterator.findKLarge(1000);
+        // 52w
+        // 最大可以算5000以内的
+        int result = findKLargeNumberInIterator.findKLarge(5000);
     }
 }
