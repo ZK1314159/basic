@@ -22,7 +22,6 @@ public class TwoSum_1_standard {
             }
             map.put(nums[i], i);
         }
-        Integer i = 0;
 
         return null;
     }
