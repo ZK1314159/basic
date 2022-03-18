@@ -8,12 +8,12 @@ import java.util.PriorityQueue;
  * <br>
  * CreateDate：2022/3/18 16:43 <br>
  */
-class MinStack {
+class MinStack_155 {
 
     LinkedList<Integer> linkedList= new LinkedList<>();
     PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
 
-    public MinStack() {
+    public MinStack_155() {
     }
 
     public void push(int val) {
