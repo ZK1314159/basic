@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
@@ -11,18 +10,13 @@ import java.util.PriorityQueue;
  */
 class MinStack {
 
-    LinkedList<Integer> linkedList;
-    PriorityQueue<Integer> priorityQueue;
+    LinkedList<Integer> linkedList= new LinkedList<>();
+    PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
 
     public MinStack() {
-
     }
 
     public void push(int val) {
-        if (linkedList == null) {
-            linkedList = new LinkedList<>();
-            priorityQueue = new PriorityQueue<>(Comparator.comparingInt(v -> v));
-        }
         linkedList.push(val);
         priorityQueue.offer(val);
     }
@@ -38,10 +32,6 @@ class MinStack {
 
     public int getMin() {
         return priorityQueue.peek();
-    }
-
-    public static void main(String[] args) {
-
     }
 
 }
