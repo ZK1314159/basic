@@ -7,7 +7,7 @@ import historry.exam2022.zijie.ListNode;
  * <br>
  * CreateDate：2022/2/27 11:39 <br>
  */
-public class AddTwoNumber {
+public class AddTwoNumber_1 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int before = 0;
@@ -66,7 +66,7 @@ public class AddTwoNumber {
     public static void main(String[] args) {
         ListNode node1 = new ListNode(2);
         ListNode node2 = new ListNode(5);
-        AddTwoNumber addTwoNumber = new AddTwoNumber();
+        AddTwoNumber_1 addTwoNumber = new AddTwoNumber_1();
         addTwoNumber.build(node1, node2);
         ListNode result = addTwoNumber.addTwoNumbers(node1, node2);
     }
