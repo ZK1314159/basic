@@ -41,10 +41,7 @@ public class IsPalindrome_234 {
     }
 
     boolean compare(ListNode left, ListNode right) {
-        while (true) {
-            if (left == null && right == null) {
-                return true;
-            }
+        while (left != null || right != null) {
             if (left != null && right != null) {
                 if (left.val != right.val) {
                     return false;
@@ -55,6 +52,7 @@ public class IsPalindrome_234 {
             left = left.next;
             right = right.next;
         }
+        return true;
     }
 
     public static void main(String[] args) {
