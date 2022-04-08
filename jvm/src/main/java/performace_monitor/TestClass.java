@@ -9,29 +9,27 @@ import java.util.List;
  * CreateDate：2022/1/20 15:51 <br>
  */
 public class TestClass {
-
-    public static class Test {
-
-//        char[] space = new char[10];
-        int i = 0;
-
-    }
+    char[] chars2 = new char[1024 * 1024];
 
     public static void main(String[] args) {
-
+        List<TestClass> test = new ArrayList<>();
+        TestClass testClass = new TestClass();
+        test.add(testClass);
         List<char[]> list = new ArrayList<>();
-        for (int j = 0; j < 100; j++) {
-            char[] chars2 = new char[20 * 1024 * 1024];
+        for (int j = 0; j < 1000; j++) {
+            System.out.println("current position: " + j);
+            char[] chars2 = new char[1024 * 1024];
             if (j % 2 == 0) {
                 list.add(chars2);
             }
-//            try {
-//                Thread.sleep(1000);
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
+            try {
+                Thread.sleep(10);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         char[] result = list.get(0);
+        TestClass tmp2 = test.get(0);
 
 //        long id = 0;
 
