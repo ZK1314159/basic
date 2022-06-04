@@ -18,4 +18,20 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+
+    @Override
+    public boolean equals(Object anObject) {
+        return this.val == ((TreeNode) anObject).val;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.val;
+    }
+
+    @Override
+    public String toString() {
+        return "val: " + val;
+    }
+
  }
