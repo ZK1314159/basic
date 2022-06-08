@@ -1,4 +1,4 @@
-package leetcode.packages;
+package leetcode.packages.package01;
 
 /**
  * Description：<br>
