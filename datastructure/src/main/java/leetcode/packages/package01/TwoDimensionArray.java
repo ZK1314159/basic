@@ -7,6 +7,7 @@ package leetcode.packages.package01;
  */
 public class TwoDimensionArray {
 
+    // dp(i, j) = max(dp(i - 1, j - w(i)) + w(i), dp(i - 1, j))
     public int maxValue(int[][] goods, int packageSize) {
         int number = goods.length;
         int[][] dp = new int[number + 1][packageSize + 1];

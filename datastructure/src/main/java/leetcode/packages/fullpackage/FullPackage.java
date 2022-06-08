@@ -1,7 +1,5 @@
 package leetcode.packages.fullpackage;
 
-import leetcode.packages.package01.OneDimensionArray;
-
 /**
  * Description：<br>
  * <br>
@@ -9,15 +7,17 @@ import leetcode.packages.package01.OneDimensionArray;
  */
 public class FullPackage {
 
+    // 完全背包和01背包的递推公式是不同的
+    // 对于dp(i, j) = max(dp(i, j - w(i)) + w(i), dp(i - 1, j))
     public int maxValue(int[][] goods, int packageSize) {
         int[] dp = new int[packageSize + 1];
-        for (int i = 0; i <= packageSize; i++) {
-            for (int j = 0; j < goods.length; j++) {
-                int weight = goods[j][0];
-                int value = goods[j][1];
-                if (weight <= i) {
-                    int candidate = dp[i - weight] + value;
-                    dp[i] = Math.max(dp[i], candidate);
+        for (int i = 0; i < goods.length; i++) {
+            for (int j = 1; j <= packageSize ; j++) {
+                int weight = goods[i][0];
+                int value = goods[i][1];
+                if (weight <= j) {
+                    int candidate = dp[j - weight] + value;
+                    dp[j] = Math.max(dp[j], candidate);
                 }
             }
         }
