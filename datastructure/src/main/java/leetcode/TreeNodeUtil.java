@@ -4,6 +4,7 @@ import tree.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Description：<br>
@@ -68,6 +69,42 @@ public class TreeNodeUtil {
            }
         }
         return null;
+    }
+
+    public static TreeNode buildTreeFormLayerScan(List<Integer> nodeList) {
+        if (nodeList == null || nodeList.size() == 0) {
+            return null;
+        }
+        Deque<TreeNode> deque = new LinkedList<>();
+        TreeNode root = new TreeNode(nodeList.get(0));
+        TreeNode start;
+        deque.offer(root);
+        int position = 1;
+        while (! deque.isEmpty()) {
+            start = deque.poll();
+            if (start == null) {
+                continue;
+            }
+            if (position > nodeList.size() - 1) {
+                break;
+            }
+            Integer left = nodeList.get(position);
+            if (left != null) {
+                start.left = new TreeNode(left);
+                deque.offer(start.left);
+            }
+            position++;
+            if (position > nodeList.size() - 1) {
+                break;
+            }
+            Integer right = nodeList.get(position);
+            if (right != null) {
+                start.right = new TreeNode(right);
+                deque.offer(start.right);
+            }
+            position++;
+        }
+        return root;
     }
 
 }
