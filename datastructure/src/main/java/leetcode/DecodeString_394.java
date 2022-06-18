@@ -15,50 +15,41 @@ package leetcode;
 
 public class DecodeString_394 {
 
+    private int now;
+
     public String decodeString(String s) {
-        StringBuilder stringBuilder = new StringBuilder();
-        decode(0, s, stringBuilder);
-        return stringBuilder.toString();
+        return decode(0, s).toString();
     }
 
-    // 基本处理单元是字符串 + 编码内容 + 字符串，并且不处于重复环境中
-    int decode(int left, String s, StringBuilder stringBuilder) {
-        int count = 0;
-        int right = left;
-        while (right < s.length() && s.charAt(right) != ']') {
-            if (s.charAt(right) >= 'a' && s.charAt(right) <= 'z') {
-                right++;
+    // 基本处理单元是字符串 + 编码内容 + 字符串
+    StringBuilder decode(int left, String s) {
+        StringBuilder stringBuilder = new StringBuilder();
+        while (now < s.length() && s.charAt(now) != ']') {
+            if (Character.isLetter(s.charAt(now))) {
+                now++;
                 continue;
             }
-            String before = s.substring(left, right);
+            String before = s.substring(left, now);
             stringBuilder.append(before);
-            count += right - left;
 
-            left = right;
             int number = 0;
-            while (s.charAt(right) >= '0' && s.charAt(right) <= '9') {
-                number = number * 10 + s.charAt(right) - '0';
-                right++;
+            while (Character.isDigit(s.charAt(now))) {
+                number = number * 10 + s.charAt(now) - '0';
+                now++;
             }
-            count += right - left;
-            count += 2;
-            right++;
-            StringBuilder innerString = new StringBuilder();
-            int innerCount = decode(right, s, innerString);
+            now++;
+            StringBuilder innerString = decode(now, s);
             String tmp = innerString.toString();
             for (int i = 1; i < number; i++) {
                 innerString.append(tmp);
             }
             stringBuilder.append(innerString.toString());
-            left = right + innerCount;
-            left++;
-            right = left;
-            count += innerCount;
+            now++;
+            left = now;
         }
-        String after = s.substring(left, right);
+        String after = s.substring(left, now);
         stringBuilder.append(after);
-        count += right - left;
-        return count;
+        return stringBuilder;
     }
 
     public static void main(String[] args) {
