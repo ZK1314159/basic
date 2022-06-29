@@ -1,6 +1,6 @@
 package leetcode;
 
-import historry.exam2022.zijie.ListNode;
+import interview.historry.exam2022.zijie.ListNode;
 
 /**
  * Description：<br>

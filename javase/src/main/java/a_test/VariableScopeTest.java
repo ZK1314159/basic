@@ -5,7 +5,7 @@ package a_test;
  *
  * @author zeng.kai <br>
  * TaskId：<br>
- * CreateDate：historry.exam2018/10/14 18:24 <br>
+ * CreateDate：interview.historry.exam2018/10/14 18:24 <br>
  */
 public class VariableScopeTest {
     public static void main(String[] args) {
