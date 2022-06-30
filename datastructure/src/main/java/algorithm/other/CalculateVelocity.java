@@ -1,4 +1,4 @@
-package test;
+package algorithm.other;
 
 /**
  * Description：<br>
