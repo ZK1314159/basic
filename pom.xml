@@ -12,10 +12,10 @@
     <modules>
         <module>datastructure</module>
         <module>designPattern</module>
-        <module>code</module>
         <module>javase</module>
         <module>jvm</module>
         <module>work</module>
+        <module>test</module>
     </modules>
     <properties>
         <netty.version>4.1.12.Final</netty.version>
