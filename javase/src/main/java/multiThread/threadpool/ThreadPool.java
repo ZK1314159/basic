@@ -15,10 +15,12 @@ public class ThreadPool {
         ThreadPoolExecutor threadPoolExecutor =
                 new ThreadPoolExecutor(5, 10, 100, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(10),
                         new ThreadPoolExecutor.CallerRunsPolicy());
+        threadPoolExecutor.allowCoreThreadTimeOut(true);
+        System.out.println(threadPoolExecutor.getPoolSize());
         Thread thread = new Thread(() -> {
             try {
 //                System.out.println(Thread.currentThread().getName() + " is running...");
-                Thread.sleep(100);
+                Thread.sleep(10);
                 System.out.println(Thread.currentThread().getName() + " finish");
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -28,6 +30,16 @@ public class ThreadPool {
             threadPoolExecutor.submit(thread);
         }
         System.out.println(Thread.currentThread().getName() + " do work");
+        try {
+            Thread.sleep(20);
+        } catch (Exception e) {
+        }
+        System.out.println(threadPoolExecutor.getPoolSize());
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e) {
+        }
+        System.out.println(threadPoolExecutor.getPoolSize());
         threadPoolExecutor.shutdown();
     }
 
