@@ -20,12 +20,11 @@ public class WebServer {
             byte[] buffer = new byte[8096];
             int hasRead = inputStream.read(buffer);
             System.out.println(new String(buffer, 0, hasRead));
-            String response = "HTTP/1.1 200\r\n" + "Content-Type: text/html\r\n"
-                    + "Date: Thu, 21 Jul 2022 15:34:34 GMT\r\n" + "Keep-Alive: timeout=60\r\n"
-                    + "Connection: keep-alive\r\n"
-                    + "\r\n" + "real content";
-            byte[] bytes = response.getBytes();
-            outputStream.write(bytes);
+            String response = "HTTP/1.1 200\n" + "Content-Type: text/html\n"
+                    + "Date: Thu, 21 Jul 2022 15:34:34 GMT\n" + "Keep-Alive: timeout=60\n"
+                    + "Connection: keep-alive\n"
+                    + "\n" + "real content";
+            outputStream.write(response.getBytes());
             socket.close();
         }
     }
